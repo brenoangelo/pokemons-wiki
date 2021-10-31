@@ -62,7 +62,7 @@ export function List() {
     useEffect(() => {
         
         (async () => {
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon/')
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon/?offset=100&limit=100')
         const { results } = response.data
         
         setPokemons(results)
